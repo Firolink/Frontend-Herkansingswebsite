@@ -1,0 +1,442 @@
+/* Bijna al mijn gebruik van flexbox heb ik te danken aan flexbox froggy.*/
+
+
+body {
+    background-image: url(images/Background.jpg);
+    background-color: #000120;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.
+/* De code hieronder is voor mijn nav en top van de website.*/
+
+ul {
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+    margin-left: 25%;
+
+}
+
+
+
+li {
+    margin-right: 0%;
+    list-style: none;
+}
+
+  li:first-child {
+        margin-left: 15%;
+        width: 30vw;
+
+    }
+
+
+li a:hover {
+    text-decoration-line: underline;
+    color: aqua;
+    text-shadow: 5em;
+}
+
+
+.active {
+    color: aqua;
+}
+
+li a {
+    color: white;
+    text-decoration-line: none;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+
+.bovenlogo {
+    right: -100%;
+    display: none;
+
+}
+
+
+.bovenlogo:hover {
+
+}
+
+
+
+.mobiellogo {
+    border: 0%;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 13vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 30vh;
+}
+
+
+
+
+
+
+
+
+/* Dit is voor mijn content van de website.*/
+
+
+
+section > article {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+}
+
+
+h1:first-of-type {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-family: 'Bowlby One SC', cursive;
+    margin-top: 15vh;
+}
+
+
+section > article > a > img {
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    width: 80vw;
+    margin: 0 5em 0 5em;
+    transition: .1s ease-in-out;
+    filter: grayscale(0);
+}
+
+
+
+
+
+section > h2 {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    font-family: 'Bowlby One SC', cursive;
+    text-decoration: none;
+
+
+}
+
+
+
+section {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 100%;
+    justify-content: center;
+
+
+}
+
+
+
+section > article > a > h2 {
+    margin-bottom: 10vh;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+
+
+section > figure > img {
+        width: 55vw;
+        text-align: center;
+        border-radius: 10px;
+}
+
+
+
+/*Met dank aan de uitleg van https://developer.mozilla.org/en-US/docs/Web/CSS/::before (serieus goeie website dit!) */
+.new::before {
+    content: "NEW!";
+    background-color:red;
+    color: white;
+    border-radius: 2px;
+    margin-right: 0.3em;
+}
+
+
+
+p {
+    color: white;
+    width: 80vw;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 15vh;
+}
+
+
+
+
+
+form {
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 4em;
+
+
+}
+
+
+
+label {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+input[type=submit] {
+    width: 10em;
+    background-color: chocolate;
+    color: aliceblue;
+    border-style: dashed;
+    border-color: white;
+    font-family: 'Raleway', sans-serif;
+    height: 3em;
+    margin-top: 1em;
+
+
+}
+
+
+input:focus {
+    background: #BAD6EB;
+}
+
+textarea:focus {
+    background: #BAD6EB;
+}
+
+.message {
+    width: 20em;
+}
+
+
+button {
+    border-radius: 20%;
+    background-color: #000120;
+    margin-left: 2em;
+    margin-top: 3em;
+    height: 5em;
+    color: lawngreen;
+    font-family: 'Raleway', sans-serif;
+    border-style: dashed;
+    border-color: lawngreen;
+
+}
+
+
+
+
+
+
+
+
+
+/* Dit is voor mijn footer.*/
+
+footer {
+    margin-top: 15em;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:60em) {
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+
+
+
+    li:first-child {
+        margin-right: auto;
+        margin-left: 0%;
+        width: 30vw;
+
+    }
+
+
+
+    li {
+        margin-right: 3%;
+        list-style: none;
+
+    }
+
+
+    .mobiellogo {
+        display: none;
+        width: 30vw;
+    }
+
+
+    .bovenlogo {
+        border: 0%;
+        margin: auto;
+        margin-top: 10vh;
+        margin-bottom: 13vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 50em;
+
+
+    }
+
+
+    h1:first-child {
+        margin-left: 30%;
+        margin-right: 30%;
+        text-align: center;
+        font-size: 4em;
+        color: white;
+        font-family: 'Bowlby One SC', cursive;
+    }
+
+
+    section > article > a > img {
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    width: 20vw;
+    margin: 0 5em 0 5em;
+    transition: .1s ease-in-out;
+    filter: grayscale(0);
+    transform: scale(1);
+}
+
+
+
+    section > article > a > img:hover {
+
+    transition: .2s ease-in-out;
+    filter: grayscale(50%);
+    transform: scale(1.1);
+
+}
+
+
+
+section > h2 {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    font-family: 'Bowlby One SC', cursive;
+    text-decoration: none;
+
+
+}
+
+
+
+section {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 100%;
+    justify-content: center;
+
+
+}
+
+
+
+section > article > a > h2 {
+    margin-bottom: 10vh;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+
+
+
+section > figure > img {
+        width: 55vw;
+        text-align: center;
+        border-radius: 10px;
+}
+
+
+
+
+
+
+    p {
+        color: white;
+        width: 50vw;
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        margin-right: 2.5vw;
+
+    }
+
+    label {
+        color: white;
+        font-family: 'Raleway', sans-serif;
+    }
+
+
+
+
+
+}
