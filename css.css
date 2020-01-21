@@ -167,7 +167,8 @@ form fieldset {
 }
 
 fieldset > label {
-    margin: 1vw;
+    margin-top:2em;
+    margin-bottom:.5em;
 }
 
 fieldset > input {
