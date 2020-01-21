@@ -5,7 +5,13 @@ console.log('hallo werkt het nog?');
 // met hulp van deze site, alleen deze code ging over een image dus heb het zelf omgezet naar body.style.backgourndImage http://techfunda.com/howto/444/changing-of-images//
 
 var lazerbutton = document.querySelector('button');
+var fakeHome = document.getElementById('fakeLogo');
 
+
+
+
+
+//dit is de function van mijn lazer button. hij switcht de image heen en weer//
 
 lazerbutton.addEventListener('click', background);
 
@@ -25,15 +31,15 @@ function background() {
 
 
 
-var fakeHome = document.getElementById('fakeLogo');
 
+//Dit is de code voor de logo change//
 
-fakeLome.addEventListener('click', logoChange);
+fakeLogo.addEventListener('click', logoChange);
 
 
 function logoChange() {
 
-
+      var image = document.getElementById('fakeLogo');
       if (image.src.match("images/Logo2.png")) {
                 image.src = "images/Logo.png";
             }
@@ -47,26 +53,3 @@ function logoChange() {
 
 
 
-
-
-
-
-let last_known_scroll_position = 1;
-let ticking = false;
-
-function doSomething(scroll_pos) {
-
-}
-
-window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
-      ticking = false;
-    });
-
-    ticking = true;
-  }
-});
