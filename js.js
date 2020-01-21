@@ -21,3 +21,52 @@ function background() {
     }
 
 }
+
+
+
+
+var fakeHome = document.getElementById('fakeLogo');
+
+
+fakeLome.addEventListener('click', logoChange);
+
+
+function logoChange() {
+
+
+      if (image.src.match("images/Logo2.png")) {
+                image.src = "images/Logo.png";
+            }
+            else {
+                image.src = "images/Logo2.png";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+let last_known_scroll_position = 1;
+let ticking = false;
+
+function doSomething(scroll_pos) {
+
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});

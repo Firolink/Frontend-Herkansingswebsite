@@ -9,62 +9,51 @@ body {
 }
 
 
-.
+
 /* De code hieronder is voor mijn nav en top van de website.*/
 
-ul {
-    display: flex;
-    flex-flow: column;
-    justify-content:center;
-    align-items: center;
-    margin-left: 25%;
-
-}
 
 
-
-li {
-    margin-right: 0%;
-    list-style: none;
-}
-
-  li:first-child {
-        margin-left: 15%;
-        width: 30vw;
+ ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
 
     }
 
 
-li a:hover {
-    text-decoration-line: underline;
-    color: aqua;
-    text-shadow: 5em;
-}
-
-
-.active {
-    color: aqua;
-}
-
 li a {
+    margin: .5em;
+    list-style: none;
     color: white;
     text-decoration-line: none;
     font-size: 1.5em;
     font-family: 'Raleway', sans-serif;
+}
+
+nav > ul > li:first-of-type {
+    margin-right: 0;
+    margin-left: 0;
+
 
 }
 
 
 
+
+
 .bovenlogo {
+    transition: .5s;
     right: -100%;
     display: none;
+    transform:  rotate(0deg);
 
 }
 
 
 .bovenlogo:hover {
-
+    transition: .5s;
+    transform:  rotate(359deg);
 }
 
 
@@ -162,9 +151,9 @@ section > article > a > h2 {
 
 
 section > figure > img {
-        width: 55vw;
-        text-align: center;
-        border-radius: 10px;
+    width: 55vw;
+    text-align: center;
+    border-radius: 10px;
 }
 
 
@@ -172,7 +161,7 @@ section > figure > img {
 /*Met dank aan de uitleg van https://developer.mozilla.org/en-US/docs/Web/CSS/::before (serieus goeie website dit!) */
 .new::before {
     content: "NEW!";
-    background-color:red;
+    background-color: red;
     color: white;
     border-radius: 2px;
     margin-right: 0.3em;
@@ -286,31 +275,40 @@ footer {
 
 @media (min-width:60em) {
 
-    ul {
+   ul {
         display: flex;
-        flex-direction: row;
         justify-content: flex-end;
-        align-items: center;
+        list-style-type: none;
 
     }
 
 
-
-
-    li:first-child {
-        margin-right: auto;
-        margin-left: 0%;
-        width: 30vw;
-
-    }
-
-
-
-    li {
-        margin-right: 3%;
+    li a {
+        margin: .5em;
         list-style: none;
+        color: white;
+        text-decoration-line: none;
+        font-size: 1.5em;
+        font-family: 'Raleway', sans-serif;
+        transition: .7s;
+    }
+
+    li a:hover {
+        text-decoration-line: underline;
+        color: aqua;
+        text-shadow: 5em;
+        transition: .2s;
+    }
+
+
+    nav > ul > li:first-of-type {
+        margin-right: auto;
+        margin-left: 0;
+
 
     }
+
+
 
 
     .mobiellogo {
@@ -344,69 +342,69 @@ footer {
 
 
     section > article > a > img {
-    border-radius: 10px;
-    margin-bottom: 1vh;
-    width: 20vw;
-    margin: 0 5em 0 5em;
-    transition: .1s ease-in-out;
-    filter: grayscale(0);
-    transform: scale(1);
-}
+        border-radius: 10px;
+        margin-bottom: 1vh;
+        width: 20vw;
+        margin: 0 5em 0 5em;
+        transition: .1s ease-in-out;
+        filter: grayscale(0);
+        transform: scale(1);
+    }
 
 
 
     section > article > a > img:hover {
 
-    transition: .2s ease-in-out;
-    filter: grayscale(50%);
-    transform: scale(1.1);
+        transition: .2s ease-in-out;
+        filter: grayscale(50%);
+        transform: scale(1.1);
 
-}
-
-
-
-section > h2 {
-    margin-left: 30%;
-    margin-right: 30%;
-    font-size: 4em;
-    text-align: center;
-    color: white;
-    font-family: 'Bowlby One SC', cursive;
-    text-decoration: none;
-
-
-}
+    }
 
 
 
-section {
-    display: flex;
-    flex-flow: wrap;
-    max-width: 100%;
-    justify-content: center;
+    section > h2 {
+        margin-left: 30%;
+        margin-right: 30%;
+        font-size: 4em;
+        text-align: center;
+        color: white;
+        font-family: 'Bowlby One SC', cursive;
+        text-decoration: none;
 
 
-}
-
-
-
-section > article > a > h2 {
-    margin-bottom: 10vh;
-    color: white;
-    text-align: center;
-    font-size: 1.5em;
-    font-family: 'Raleway', sans-serif;
-
-}
+    }
 
 
 
+    section {
+        display: flex;
+        flex-flow: wrap;
+        max-width: 100%;
+        justify-content: center;
 
-section > figure > img {
+
+    }
+
+
+
+    section > article > a > h2 {
+        margin-bottom: 10vh;
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Raleway', sans-serif;
+
+    }
+
+
+
+
+    section > figure > img {
         width: 55vw;
         text-align: center;
         border-radius: 10px;
-}
+    }
 
 
 
